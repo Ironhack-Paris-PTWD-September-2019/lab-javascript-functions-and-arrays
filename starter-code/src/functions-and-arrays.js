@@ -36,6 +36,14 @@ const words = [
 ];
 
 // Calculating a Sum
+function sumArray(arr){
+  let sum=0;
+  for(let i=0; i<arr.length; i++){
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
