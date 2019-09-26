@@ -80,6 +80,18 @@ const wordsArr = [
 ];
 
 // Unique Arrays
+function uniquifyArray(wordArr){
+  if (wordArr.length===0){return [];}
+  var newArr=[];
+  for(let i=0; i<wordArr.length; i++){
+    if(newArr.indexOf(wordArr[i])===-1){
+      newArr.push(wordArr[i]);
+    }
+  }
+  return newArr;
+  
+}
+
 const wordsUnique = [
   'crab',
   'poison',
