@@ -107,6 +107,15 @@ const wordsUnique = [
 ];
 
 // Finding Elements
+function doesWordExist(wordArr,word){
+ 
+ let bool=false; 
+ for(let i=0; i<wordArr.length; i++) {
+   if(wordArr[i]===word){bool=true;}
+ }
+ return bool;
+}
+
 const wordsFind = [
   'machine',
   'subset',
