@@ -1,4 +1,10 @@
 // Find the maximum
+function maxOfTwoNumbers(arg1,arg2){
+  console.log(Math.max(arg1,arg2));
+  return Math.max(arg1,arg2);
+  }
+
+  maxOfTwoNumbers(1,89);
 
 // Finding Longest Word
 const words = [
@@ -11,13 +17,60 @@ const words = [
   'crackpot'
 ];
 
+const oneWord = [
+  "bouh"
+]
+
+function findLongestWord (tablo){
+  if (tablo.length === 0){
+    return null;
+  } if (tablo.length === 1){
+    return tablo[0];
+  }
+  let plusGrand = "";
+  for (var i=0;i<tablo.length; i++){
+    if (tablo[i].length > plusGrand.length){
+      plusGrand = tablo[i];
+    }
+  }
+  return plusGrand;
+    }
+
+console.log('coucou', findLongestWord(words));
+
+console.log(findLongestWord(oneWord));
+
 // Calculating a Sum
+function sumArray (tablo) {
+  var i = 0;
+tablo.forEach(function(el,index) {
+i += tablo[index];
+})
+return i;
+}
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+console.log(sumArray(numbers));
+
 
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers (tablo) {
+  if (tablo.length === 0) {
+    return null;
+  }
+  var i = 0;
+  tablo.forEach(function(el,index) {
+  i += tablo[index];
+  })
+  return i/tablo.length;
+  
+}
+
+console.log(averageNumbers(numbersAvg));
 
 // Array of Strings
 const wordsArr = [
@@ -33,6 +86,21 @@ const wordsArr = [
   'palace'
 ];
 
+function averageWordLength(tablo){
+  if (tablo.length === 0) {
+    return null;
+  }
+  var i = 0;
+  tablo.forEach(function(el,index) {
+  i += tablo[index].length;
+  })
+  return i/tablo.length;
+}
+
+
+
+
+
 // Unique Arrays
 const wordsUnique = [
   'crab',
@@ -47,6 +115,21 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
+function uniquifyArray(tablo){
+  if (tablo.length === 0) {
+    return [];
+  }
+  var output = [];
+  tablo.forEach(function(el,i){
+    if (output.indexOf(el) === -1){
+      output.push(el);
+    } 
+  })
+  return output;
+}
+
+console.log(uniquifyArray(wordsUnique));
 
 // Finding Elements
 const wordsFind = [
