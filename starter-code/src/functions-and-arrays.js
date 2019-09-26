@@ -1,4 +1,9 @@
 // Find the maximum
+function maxOfTwoNumbers (nb1,nb2){
+var result
+result=Math.max(nb1,nb2);
+return result;
+};
 
 // Finding Longest Word
 const words = [
@@ -11,13 +16,44 @@ const words = [
   'crackpot'
 ];
 
+
+function findLongestWord(mots){
+  if(mots.length===0){
+    return null;
+  }
+  let longestword=mots[0];
+  for(var i=1;i<mots.length;i++){
+    if(longestword.length < mots[i].length){
+      longestword=mots[i];
+    } 
+  }
+  return longestword;
+};
+
+
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumArray(chiffres){
+  let result=0;
+  for(var i=0;i<chiffres.length;i++){
+    result=result+chiffres[i];
+  }
+  return result;
+};
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers(chiffres){
+  let result=0;
+  for(var i=0;i<chiffres.length;i++){
+    result=result+chiffres[i];
+  }
+  result=result/chiffres.length;
+  return result;
+};
 
 // Array of Strings
 const wordsArr = [
@@ -33,6 +69,14 @@ const wordsArr = [
   'palace'
 ];
 
+function averageWordLength(mots){
+  let result=0;
+  for(var i=0;i<mots.length;i++){
+    result=result+mots[i].length;
+  }
+  result=result/mots.length;
+  return result;
+};
 // Unique Arrays
 const wordsUnique = [
   'crab',
@@ -47,7 +91,17 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
-
+function averageWordLength(mots){
+  for(var i=0;i<mots.length;i++){
+    let result=0
+    if(mots.indexof(mots[i])>1){
+      result=result+i;
+      mots.splice(i,1);
+    }
+    }
+  }
+  return mots;
+};
 // Finding Elements
 const wordsFind = [
   'machine',
@@ -59,6 +113,12 @@ const wordsFind = [
   'truth',
   'disobedience'
 ];
+
+function doesWordExist(liste,search){
+for (var i=0;i<liste.length;i++){
+  return(search===liste[i]);
+}
+}
 
 // Counting Repetition
 const wordsCount = [
