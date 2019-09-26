@@ -57,6 +57,15 @@ function averageNumbers(arr){
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 // Array of Strings
+
+function averageWordLength(wordArr){
+  if(wordArr.length===0){return null;};
+  let numbers=[];
+  wordArr.forEach(function(word){numbers.push(word.length);}); 
+  return averageNumbers(numbers);
+
+}
+
 const wordsArr = [
   'seat',
   'correspond',
