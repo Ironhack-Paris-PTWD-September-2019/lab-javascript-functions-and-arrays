@@ -128,6 +128,15 @@ const wordsFind = [
 ];
 
 // Counting Repetition
+function howManyTimes(wordArr,word){
+let rep=0;
+for(let i=0;i<wordArr.length; i++){
+  if(wordArr[i]===word){rep +=1; };
+}
+return rep; 
+
+}
+
 const wordsCount = [
   'machine',
   'matter',
