@@ -10,6 +10,21 @@ function maxOfTwoNumbers(num1,num2){
   }
 }
 // Finding Longest Word
+function findLongestWord(words){
+  if(words.length===0) {return null;}; 
+
+  let len=words[0].length;
+  let word=words[0];
+
+  for(var i=1; i<words.length; i++){
+    if(words[i].length>len){
+      len=words[i].length;
+      word=words[i]
+    }
+  }
+  return word;
+}
+
 const words = [
   'mystery',
   'brother',
