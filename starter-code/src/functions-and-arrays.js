@@ -48,6 +48,11 @@ function sumArray(arr){
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // Calculate the Average
+function averageNumbers(arr){
+  if (arr.length===0){return null;}
+  let sum=sumArray(arr); 
+  return sum/(arr.length);
+}
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
