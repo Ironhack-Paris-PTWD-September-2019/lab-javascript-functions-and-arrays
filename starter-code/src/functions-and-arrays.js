@@ -1,6 +1,27 @@
 // Find the maximum
-
+function maxOfTwoNumbers(n1, n2){
+  if (n1 > n2){
+    return n1; 
+  }else {
+    return n2;
+  }
+}
+maxOfTwoNumbers(3,6)
 // Finding Longest Word
+function findLongestWord(words) {
+  if(words.length ===0) return null;
+  var newWord= words[0];
+
+  for (var i=1; i< words.length; i++) {
+    if(newWord.length < words[i].length) {
+      newWord=words[i]
+    }
+  }
+  return newWord;
+}
+
+findLongestWord(words);
+
 const words = [
   'mystery',
   'brother',
@@ -11,15 +32,31 @@ const words = [
   'crackpot'
 ];
 
-// Calculating a Sum
 
+// Calculating a Sum
+function sumArray(numbers){
+  var sum = 0;
+for (var i=0; i<numbers.length; i++){
+sum += numbers[i];
+}
+return sum 
+}
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // Calculate the Average
+function averageNumbers (array){
+  if (array.length ===0){ return null}
+  return sumArray(array)/array.length
+}
+
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 // Array of Strings
+function averageWordLength (array2){
+  if (array2.length ===0){ return null}
+  return wordsArr.length/2
+}
 const wordsArr = [
   'seat',
   'correspond',
@@ -34,6 +71,13 @@ const wordsArr = [
 ];
 
 // Unique Arrays
+function indexOf (){
+  var newArray
+  if (index[i] === index[i]){
+    wordsUnique.splice(index[i], 1)
+  }
+  return newArray
+}
 const wordsUnique = [
   'crab',
   'poison',
