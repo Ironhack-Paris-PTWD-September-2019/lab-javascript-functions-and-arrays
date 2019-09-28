@@ -156,13 +156,13 @@ function greatestProduct(matrix){
 let max=1; 
 for(let i=0; i<20; i++){
   for(let j=0; j<20;j++){
-    let calcul1=matrix[i][j]*(matrix[i][j+1]||1)*(matrix[i][j+2]||1)*(matrix[i][j+3]||1); 
+    let calcul1=matrix[i][j]*((matrix[i]||[])[j+1]||1)*((matrix[i]|[])[j+2]||1)*((matrix[i]|[])[j+3]||1); 
     if (calcul1>max){max=calcul1};
-    let calcul2=matrix[i][j]*(matrix[i][j-1]||1)*(matrix[i][j-2]||1)*(matrix[i][j-3]||1);
+    let calcul2=matrix[i][j]*((matrix[i]|[])[j-1]||1)*((matrix[i]|[])[j-2]||1)*((matrix[i]|[])[j-3]||1);
     if (calcul2>max){max=calcul2};
-    let calcul3=matrix[i][j]*(matrix[i-1][j]||1)*(matrix[i-2][j]||1)*(matrix[i-3][j]||1);
+    let calcul3=matrix[i][j]*((matrix[i-1]|[])[j]||1)*((matrix[i-2]|[])[j]||1)*((matrix[i-3]|[])[j]||1);
     if (calcul3>max){max=calcul3};
-    let calcul4=matrix[i][j]*(matrix[i+1][j]||1)*(matrix[i+2][j]||1)*(matrix[i+3][j]||1);
+    let calcul4=matrix[i][j]*((matrix[i+1]|[])[j]||1)*((matrix[i+2]|[])[j]||1)*((matrix[i+3]|[])[j]||1);
     if (calcul4>max){max=calcul4};
 
   }
