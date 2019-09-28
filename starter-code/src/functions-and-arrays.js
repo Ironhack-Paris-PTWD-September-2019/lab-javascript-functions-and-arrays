@@ -1,4 +1,11 @@
 // Find the maximum
+function maxOfTwoNumbers (number1, number2) {
+  if (number1 > number2) {
+    return number1;
+  } else {
+    return number2;
+  }
+}
 
 // Finding Longest Word
 const words = [
@@ -11,13 +18,46 @@ const words = [
   'crackpot'
 ];
 
+function findLongestWord (words) {
+  if (words.length === 0) {
+    return null;
+  }
+  var longestWord = words[0];
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+  console.log(longestWord);
+  return longestWord;
+}
+
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumArray(numbers) {
+  var sum = 0;
+  numbers.forEach(function (number) {
+    sum += number;
+  })
+  return sum;
+}
+
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers(numbersAvg) {
+  if (numbersAvg.length === 0) {
+    return null;
+  }
+  var sum = 0;
+  numbersAvg.forEach(function (number) {
+    sum += number;
+  })
+  return sum / numbersAvg.length;
+}
 
 // Array of Strings
 const wordsArr = [
@@ -32,6 +72,17 @@ const wordsArr = [
   'fuel',
   'palace'
 ];
+
+function averageWordLength(words) {
+  if (words.length === 0) {
+    return null;
+  }
+  var sumWordsLength = 0;
+  words.forEach(function (word) {
+    sumWordsLength += word.length;
+  })
+  return sumWordsLength / words.length;
+}
 
 // Unique Arrays
 const wordsUnique = [
@@ -48,6 +99,22 @@ const wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray (words) {
+  if(words.length === 0){
+    return [];
+  }
+
+  var uniquifyList = [words[0]];
+  words.forEach(function (word) {
+    if(uniquifyList.indexOf(word) === -1) {
+      uniquifyList.push(word);
+    }
+  },)
+  return uniquifyList;
+}
+
+uniquifyArray(wordsUnique);
+
 // Finding Elements
 const wordsFind = [
   'machine',
@@ -59,6 +126,17 @@ const wordsFind = [
   'truth',
   'disobedience'
 ];
+
+function doesWordExist(words,wordToFind) {
+  wordFound = false;
+  words.forEach(function(word) {
+    if(word === wordToFind)
+    wordFound = true;
+  },)
+  return wordFound;
+}
+
+doesWordExist(wordsFind, "hey");
 
 // Counting Repetition
 const wordsCount = [
@@ -74,6 +152,21 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes(words,wordToFind) {
+  if(words.length === 0){
+    return 0;
+  }
+
+  wordFoundCount = 0;
+  words.forEach(function(word) {
+    if(word === wordToFind)
+    wordFoundCount++;
+  },)
+  return wordFoundCount;
+}
+
+howManyTimes(wordsCount, "hey");
 
 // Bonus
 
