@@ -1,4 +1,7 @@
 // Find the maximum
+function maxOfTwoNumbers(num1, num2){
+  return (Math.max(num1, num2)); 
+}
 
 // Finding Longest Word
 const words = [
@@ -11,13 +14,37 @@ const words = [
   'crackpot'
 ];
 
+var LongestWord = words.sort((a,b)=>b.length - a.length);
+console.log (LongestWord[0]); //crocodile//
+
+function findLongestWord(words){
+  var longestWord = words.sort((a,b)=>b.length - a.length);
+  let word =""; 
+  for(let i =0; i<words.length; i++){
+    if (words.length===0){
+      return null; 
+    }else if(word.lenght>words[i].length){
+      word =arr[i]; 
+    }
+    console.log (longestWord[0]);
+  }
+  return word; //Ironhack//
+}
+
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+let sumArray = (a,b) => a+b; 
+console.log (numbers.reduce(sumArray).toFixed(0));
 
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+let sum = (a,b) => a+b; 
+console.log (numbersAvg.reduce(sum).toFixed(0));
+let averageNumbers = (sum / numbersAvg.length); 
+console.log (averageNumbers); 
+
 
 // Array of Strings
 const wordsArr = [
@@ -32,6 +59,16 @@ const wordsArr = [
   'fuel',
   'palace'
 ];
+
+
+function averageWordLength(wordsArr) {
+  wordsArray.forEach(word => {
+    console.log(word.length)
+    sum+=word.length.reduce((a,b)=>a+b); 
+  });
+}
+console.log(sum/wordsArr.length); 
+
 
 // Unique Arrays
 const wordsUnique = [
@@ -48,6 +85,10 @@ const wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray(wordsUnique){
+  return Array.from(new Set(wordsUnique));
+}
+
 // Finding Elements
 const wordsFind = [
   'machine',
@@ -59,6 +100,18 @@ const wordsFind = [
   'truth',
   'disobedience'
 ];
+
+
+function doesWordExist(wordsFind,element){
+  for (var i = 0; i<wordsFind.length; i++){
+    if(wordsFind[i]===element) {
+      return true; 
+    }
+  }
+  return false; 
+}
+console.log(doesWordExist(wordsFind,trouble))
+
 
 // Counting Repetition
 const wordsCount = [
@@ -74,6 +127,25 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes(wordsCount,current){
+  wordsCount.sort(); 
+  var current= null; 
+  var count = 0; 
+  for(var i=0; i<wordsCount.length;i++)
+    if(wordsCount[i]!= current){
+      if(count>0){
+        console.log(current+ " appears"+ count + " times")
+      }
+      current=wordsCount[i]; 
+      count=1; 
+    }else{
+      count++; 
+    }
+}
+if(count>0){
+  console.log(current+ "appears"+ count + "times")
+}
 
 // Bonus
 
