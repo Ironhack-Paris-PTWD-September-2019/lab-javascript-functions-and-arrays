@@ -1,6 +1,34 @@
 // Find the maximum
 
+function maxOfTwoNumbers(x,y){
+  if ( x > y ){
+    return x;
+  } else {
+    return y;
+  }
+} 
+
+//console.log (maxOfTwoNumbers(3,5))
+
 // Finding Longest Word
+
+// definition
+
+function findLongestWord (tableau) {
+  // if (!tableau) {
+    let mot_long = tableau[0];
+    for (let i=1; i<tableau.length; i++) {
+    if (tableau[i].length > mot_long.length) {
+      mot_long = tableau[i];
+    }
+  }
+    return mot_long;
+  // } else {
+  //   return "";
+  // }
+}
+
+// appel
 const words = [
   'mystery',
   'brother',
@@ -10,16 +38,59 @@ const words = [
   'orchard',
   'crackpot'
 ];
+console.log (findLongestWord(words));
+
 
 // Calculating a Sum
 
+// definition
+function sumArray (tableau){
+  const reducer = (somme, valeur) => somme + valeur;
+  return tableau.reduce(reducer);
+}
+
+// appel
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+console.log(sumArray(numbers));
+
+
 
 // Calculate the Average
 
+// Definition
+
+function averageNumbers (tableau){
+  return sumArray (tableau) / tableau.length; 
+}
+
+
+// Appel
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+console.log(averageNombers(numbersAvg));
 
 // Array of Strings
+
+//Definition 
+function averageWordLength(tableau) {
+  var tab_length = [];
+
+  tableau.forEach(function (el) {
+    tab_length.push(el.length);
+  });
+
+  // Arrow function niv1, a utiliser
+  // tableau.forEach((el) => {
+  //   return tab_length.push(el.length);
+  // });
+
+   // Arrow function niv2, monoligne, pas de return pas d {}
+  // tableau.forEach((el) => tab_length.push(el.length));
+
+  return averageNumbers(tab_length);
+
+
+}
+
 const wordsArr = [
   'seat',
   'correspond',
