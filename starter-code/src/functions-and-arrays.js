@@ -1,5 +1,15 @@
 // Find the maximum
 
+function maxOfTwoNumbers (number1,number2) {
+  if (number1>number2) {
+    return number1;
+  } else {
+    return number2;
+  }
+}
+
+maxOfTwoNumbers (3,2)
+
 // Finding Longest Word
 const words = [
   'mystery',
@@ -11,13 +21,58 @@ const words = [
   'crackpot'
 ];
 
+function findLongestWord (tableau) {
+  if (tableau.length===0) {
+    return null;
+  }
+  var motPlusLong = tableau[0];
+ 
+  for (var i = 1; i < tableau.length; i++) {
+    
+    if (tableau[i].length > motPlusLong.length) {
+      motPlusLong = tableau[i];
+    }
+  }
+  return motPlusLong;
+}
+
+findLongestWord (words);
+
+
+
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumArray(tab) {
+  var somme= 0;
+  if (tab.length===0){
+      return somme=0; 
+    }
+ 
+  for (var i = 0; i < tab.length; i++) {
+    somme = somme + tab[i];
+  }
+  
+  return somme;
+}
+
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+
+
+function averageNumbers (tablo) {
+  if (tablo.length===0){
+    return null; }
+
+  var sum = sumArray (tablo); 
+  var average = (sum / tablo.length);
+  return average;
+  }
+
+averageNumbers (numbersAvg)
 
 // Array of Strings
 const wordsArr = [
@@ -32,6 +87,31 @@ const wordsArr = [
   'fuel',
   'palace'
 ];
+
+function sumWordLength (tabWord) {
+  var sumLength= 0;
+    if (tabWord.length===0){
+        return sumLength=0; 
+    }
+   
+    for (var i = 0; i < tabWord.length; i++) {
+      sumLength = sumLength + tabWord[i].length;
+    }
+  return sumLength;
+  }
+
+function averageWordLength (tabWord){
+  if (tabWord.length===0){
+    return null; 
+  }
+
+  var sumWord = sumWordLength (tabWord); 
+  var averageLength = (sumWord / tabWord.length);
+  return averageLength;
+  }
+
+
+averageWordLength(wordsArr);
 
 // Unique Arrays
 const wordsUnique = [
@@ -48,6 +128,22 @@ const wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray(tabloDeMots){
+  var newTabWithUnique=[];
+  if (tabloDeMots.length===0){
+    return []; 
+  }
+
+  for (var i = 0; i < tabloDeMots.length; i++) {
+    if (newTabWithUnique.indexOf(tabloDeMots[i])===-1){
+      newTabWithUnique.push(tabloDeMots[i]);
+    }
+  }
+return newTabWithUnique;
+}
+
+uniquifyArray(wordsUnique);
+
 // Finding Elements
 const wordsFind = [
   'machine',
@@ -59,6 +155,18 @@ const wordsFind = [
   'truth',
   'disobedience'
 ];
+
+function doesWordExist (tabloMo,wordToSearch){
+  if (tabloMo.length===0){
+    return false
+  }
+  for (var i=0; i<tabloMo.length;i++) {
+    if (tabloMo[i]===wordToSearch){
+      return true;
+    }
+  }
+    return false;
+}
 
 // Counting Repetition
 const wordsCount = [
@@ -75,6 +183,19 @@ const wordsCount = [
   'matter'
 ];
 
+function howManyTimes(list,mot) {
+  var nbFois=0;
+    if (list.length===0){
+      return 0;
+    }
+  
+    for (var i=0; i<list.length;i++){
+      if (list[i]===mot) {
+      nbFois++;
+      }
+    }
+  return nbFois;
+}
 // Bonus
 
 const matrix = [
