@@ -1,4 +1,23 @@
 // Find the maximum
+function maxOfTwoNumbers(nb1,nb2){
+  if (nb1>nb2){
+    return(nb1);
+  }
+  return nb2;
+}
+
+function findLongestWord(my_array){
+  if (my_array.length == 0){
+    return null;
+  }
+  var my_longest_one='';
+  for (let i=0; i<my_array.length; i++){
+    if (my_array[i].length > my_longest_one.length){
+      my_longest_one=my_array[i];
+    }
+  }
+  return my_longest_one;
+}
 
 // Finding Longest Word
 const words = [
@@ -12,14 +31,41 @@ const words = [
 ];
 
 // Calculating a Sum
+function sumArray(my_array){
+  var my_sum=0;
+  for(var i=0; i<my_array.length; i++){
+    my_sum+=my_array[i];
+  }
+  return my_sum;
+}
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // Calculate the Average
 
+function averageNumbers(my_array){
+  if (my_array.length == 0){
+    return null;
+  }
+  var my_sum=sumArray(my_array);
+  var my_average=my_sum/my_array.length;
+  return my_average;
+}
+
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 // Array of Strings
+function averageWordLength(my_array){
+  if (my_array.length == 0){
+    return null;
+  }
+  var my_average=0;
+  for(let i=0; i<my_array.length; i++){
+    my_average+=my_array[i].length;
+  }
+  return(my_average/my_array.length);
+  
+}
 const wordsArr = [
   'seat',
   'correspond',
@@ -34,6 +80,19 @@ const wordsArr = [
 ];
 
 // Unique Arrays
+function uniquifyArray(my_array){
+  var good_array = my_array;
+  var my_value;
+  var j;
+  for(let i=0; i<good_array.length; i++){
+    my_value=good_array[i];
+    while (good_array.indexOf(good_array[i],i+1) != -1){
+      var j=good_array.indexOf(good_array[i],i+1);
+      good_array.splice(j,1);
+    }
+  }
+  return good_array;
+}
 const wordsUnique = [
   'crab',
   'poison',
@@ -49,6 +108,14 @@ const wordsUnique = [
 ];
 
 // Finding Elements
+function doesWordExist(my_array, my_word){
+  for (let i=0; i<my_array.length; i++){
+    if (my_array[i]==my_word){
+      return true;
+    }
+  }
+  return false;
+}
 const wordsFind = [
   'machine',
   'subset',
@@ -61,6 +128,16 @@ const wordsFind = [
 ];
 
 // Counting Repetition
+
+function howManyTimes(my_array, my_word){
+  var compt=0;
+  for (let i=0; i<my_array.length; i++){
+    if (my_array[i]==my_word){
+      compt++;
+    }
+  }
+  return compt;
+}
 const wordsCount = [
   'machine',
   'matter',
@@ -76,6 +153,8 @@ const wordsCount = [
 ];
 
 // Bonus
+
+
 
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
