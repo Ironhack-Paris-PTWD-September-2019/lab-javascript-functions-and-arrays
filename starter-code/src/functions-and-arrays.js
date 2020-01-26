@@ -1,4 +1,7 @@
 // Find the maximum
+function maxOfTwoNumbers(number1, number2){
+  return Math.max(number1, number2);
+}
 
 // Finding Longest Word
 const words = [
@@ -11,13 +14,53 @@ const words = [
   'crackpot'
 ];
 
+function findLongestWord(list){
+  console.log('list', list);
+  if (list.length === 0 ){
+    return null;
+  }
+  let longestWord = " ";
+  list.forEach(element => { 
+    if (element.length > longestWord.length ) {
+      longestWord = element;
+    } 
+  });
+   console.log('longest word', longestWord);
+  return longestWord ;
+}
+
+
+
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumArray (list){
+  let sumList = 0;
+  list.forEach(element => {
+    sumList += element ;
+  });
+  console.log ('somme tableau ' + sumList);
+  return sumList;
+}
+
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers (list) {
+  if (list.length === 0 ){
+    return null;
+  }
+  let somme = sumArray(list);
+  let moyenne = somme / list.length ;
+
+  console.log ('moyenne tableau ' + moyenne);
+  return moyenne;
+
+}
+
+
 
 // Array of Strings
 const wordsArr = [
@@ -33,6 +76,28 @@ const wordsArr = [
   'palace'
 ];
 
+function averageWordLength (list) {
+  if (list.length === 0 ){
+    return null;
+  }
+
+  let sommeLettres = 0;
+
+  list.forEach( element => {
+      sommeLettres += element.length ;
+    }
+  )
+
+  let moyenneLettres = sommeLettres / list.length ;
+
+  console.log ('moyenne lettres ' + moyenneLettres);
+  return moyenneLettres;
+
+}
+
+
+
+
 // Unique Arrays
 const wordsUnique = [
   'crab',
@@ -47,6 +112,21 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
+function uniquifyArray (list ){
+  if (list.length === 0 ){
+    return null;
+  }
+
+  list.forEach (element => {
+      if 
+
+  }
+
+  )
+
+
+}
 
 // Finding Elements
 const wordsFind = [
